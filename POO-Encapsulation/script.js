@@ -12,6 +12,14 @@ class Calculadora {
     this.num2 = Number(val);
   }
 
+  getNum1(){
+    return this.num1
+  }
+
+  getNum2(){
+    return this.num2
+  }
+
   sumar() {
     return this.num1 + this.num2;
   }
@@ -66,6 +74,6 @@ function realizarOperacion(operacion) {
         break;
   }
 
-  document.getElementById('res').innerHTML = `El resultado es: ${res}`
+  document.getElementById('res').innerHTML = `El resultado es: ${res} al ${operacion} los siguientes números: ${calc.getNum1()} y ${calc.getNum2}`
 
 }
